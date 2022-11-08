@@ -125,12 +125,16 @@
                     </div> -->
 
                                         <div class="mb-4">
-                                            <input formControlName="phone_no" type="tel" class="form-control"
-                                                placeholder="Phone Number" maxlength="10" id="exampleInputEmail1"
+                                            <input formControlName="phone_no" maxlength="10" type="tel"
+                                                class="form-control" (keypress)="keyPressNumbers($event)"
+                                                placeholder="Phone Number" id="exampleInputEmail1"
                                                 aria-describedby="emailHelp"
                                                 [ngClass]="{ 'is-invalid': f['phone_no'].touched && f['phone_no'].errors || submitted && f['phone_no'].errors}">
                                             <div *ngIf="submitted && f['phone_no'].errors || f['phone_no'].touched && f['phone_no'].invalid"
                                                 class="invalid-feedback">
+                                                <div *ngIf="f['phone_no'].errors.pattern">
+                                                    Mobile number not valid.
+                                                </div>
                                                 <div *ngIf="f['phone_no'].errors && f['phone_no'].errors['required']">
                                                     Phone no is required!
                                                 </div>

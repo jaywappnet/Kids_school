@@ -29,12 +29,22 @@ export class ContactUsComponent implements OnInit {
             name: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
             message: ['', [Validators.required]],
-            phone_no: ['', Validators.required],
+            phone_no: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
         });
     }
 
     get f() {
         return this.queriesForm.controls;
+    }
+
+    keyPressNumbers(event: any) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        if ((charCode < 48 || charCode > 57)) {
+            event.preventDefault();
+            return false;
+        } else {
+            return true;
+        }
     }
 
     saveQuery() {

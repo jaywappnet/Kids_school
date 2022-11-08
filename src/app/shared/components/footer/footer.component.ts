@@ -18,13 +18,23 @@ export class FooterComponent implements OnInit {
         this.AskForm = this.fb.group({
             user_name: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
-            phone_no: ['', Validators.required],
+            phone_no: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
             study_class: ['', [Validators.required]],
         });
     }
 
     get f() {
         return this.AskForm.controls;
+    }
+
+    keyPressNumbers(event: any) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        if ((charCode < 48 || charCode > 57)) {
+            event.preventDefault();
+            return false;
+        } else {
+            return true;
+        }
     }
 
     onSubmit() {

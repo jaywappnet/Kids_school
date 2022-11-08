@@ -35,8 +35,8 @@
 
                             <div class="mb-4">
                                 <input formControlName="phone_no" type="tel" class="form-control"
-                                    placeholder="Phone Number" maxlength="10" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp"
+                                    (keypress)="keyPressNumbers($event)" placeholder="Phone Number" maxlength="10"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp"
                                     [ngClass]="{ 'is-invalid': f['phone_no'].touched && f['phone_no'].errors ||  submitted && f['phone_no'].errors}">
                                 <div *ngIf="submitted && f['phone_no'].errors || f['phone_no'].touched && f['phone_no'].invalid"
                                     class="invalid-feedback">
