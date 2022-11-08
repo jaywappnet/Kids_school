@@ -1,0 +1,174 @@
+<section class="contact-hero-section">
+    <div class="hero-image"><img src="assets/images/img-contact-hero.png" class="hero-image-desktop" alt=""><img
+            src="assets/images/img-contact-hero-mobile.png" class="hero-image-mobile" alt=""></div>
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6 col-md-9 col-sm-12">
+                    <div class="hero-text">
+                        <h1>CONTACT US</h1>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua.
+                            incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="teaching-section teaching-vector text-center">
+    <div class="container">
+        <div class="teaching-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-9 mt-5 mb-5">
+                    <div class="teaching-quote">
+                        <div class="title-heading mb-4 mb-lg-5 text-center">
+                            <h1>Teaching Your Child Some Good Manners</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s</p>
+                        <button class="btn mt-4" type="button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get-in-touch-section play-group-section choose-left-vector choose-right-vector common-section">
+    <div class="container">
+        <div class="student-get-in-touch-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                        <h1 [innerHtml]="getinTouch?.title"></h1>
+                        <img src="{{'assets/images/'+getinTouch?.icon}}" alt="" style="margin: 0">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
+                            <div class="get-in-touch-content wave-middle">
+                                <h2 [innerHtml]="getinTouch?.description"></h2>
+                                <div class="contact-info">
+                                    <ul class="">
+                                        <li><img src="assets/images/ic_location.svg" alt="">
+                                            <div style="margin-top: -40px;">
+                                                <h5 [innerHtml]="getinTouch?.location"></h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+                                        <li><img src="assets/images/ic_phone.svg" alt="">
+                                            <div>
+                                                <p style="width: 200px; margin-left: -32px; margin-top: -28px;"
+                                                    [innerHtml]="getinTouch?.contact_no"></p>
+                                            </div>
+                                        </li>
+                                        <li><img src="assets/images/ic_mail.svg" alt="">
+                                            <div>
+                                                <p>{{getinTouch?.email}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <div class="footer-content">
+                                <form [formGroup]="queriesForm" (ngSubmit)="saveQuery()" class="wave-middle">
+                                    <h2>For Further Queries</h2>
+                                    <div class="form-group mt-5 mb-5">
+                                        <div class="mb-4">
+                                            <!-- <label for="input-group-text" class="form-label">Your Name</label> -->
+                                            <input formControlName="name" type="text" class="form-control"
+                                                placeholder="Your Name" aria-describedby="basic-addon1"
+                                                [ngClass]="{ 'is-invalid': f['name'].errors && f['name'].touched || submitted && f['name'].errors }" />
+                                            <div *ngIf=" f['name'].errors && f['name'].touched || submitted && f['name'].errors"
+                                                class="invalid-feedback">
+                                                <div
+                                                    *ngIf="f['name'].errors && f['name'].touched || submitted && f['name'].errors">
+                                                    Name is
+                                                    required!</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <input type="text" formControlName="email" class="form-control"
+                                                placeholder="Email Address"
+                                                [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors ||  submitted && f['email'].errors}" />
+                                            <div *ngIf="f['email'].touched && f['email'].errors ||  submitted && f['email'].errors"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['email'].errors.required">Email is required</div>
+                                                <div *ngIf="f['email'].errors.email">Email must be a valid email address
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="mb-4">
+                      <input formControlName="phone_no" type="number" class="form-control" placeholder="Phone Number"
+                      maxlength="10" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        [ngClass]="{ 'is-invalid': f['phone_no'].errors && f['phone_no'].touched || submitted && f['phone_no'].errors}"
+                        required />
+
+                      <div *ngIf=" f['phone_no'].errors && f['phone_no'].touched || submitted && f['phone_no'].errors"
+                        class="invalid-feedback">
+                        <div
+                          *ngIf=" f['phone_no'].errors && f['phone_no'].touched || submitted && f['phone_no'].errors">
+                          Phone no is required!
+                        </div>
+                      </div>
+                    </div> -->
+
+                                        <div class="mb-4">
+                                            <input formControlName="phone_no" type="tel" class="form-control"
+                                                placeholder="Phone Number" maxlength="10" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp"
+                                                [ngClass]="{ 'is-invalid': f['phone_no'].touched && f['phone_no'].errors || submitted && f['phone_no'].errors}">
+                                            <div *ngIf="submitted && f['phone_no'].errors || f['phone_no'].touched && f['phone_no'].invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['phone_no'].errors && f['phone_no'].errors['required']">
+                                                    Phone no is required!
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <!-- <label for="input-group-text" class="form-label">Your Name</label> -->
+                                            <input formControlName="message" type="text" class="form-control"
+                                                placeholder="Message" aria-label="text" aria-describedby="basic-addon1"
+                                                [ngClass]="{ 'is-invalid': f['message'].errors && f['message'].touched || submitted && f['message'].errors}"
+                                                required />
+                                            <div *ngIf="f['message'].errors && f['message'].touched || submitted && f['message'].errors"
+                                                class="invalid-feedback">
+                                                <div
+                                                    *ngIf="f['message'].errors && f['message'].touched || submitted && f['message'].errors">
+                                                    Message is required!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="google-map-ection">
+    <!--Google map-->
+    <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.71248754891!2d72.51570021542382!3d23.071000020304723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8304820a9929%3A0x49ad182965282b07!2sWappnet%20Systems%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1628257509683!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <!--Google Maps-->
+</section>

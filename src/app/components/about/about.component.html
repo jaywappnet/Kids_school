@@ -1,0 +1,235 @@
+<section class="about-hero-section">
+    <!-- <div class="hero-image"><img src="{{aboutImg?.img}}" class="desktop-image" alt=""></div> -->
+    <div class="hero-image"><img src="assets/images/about-hero-desktop-image.png" class="desktop-image" alt=""></div>
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-12 col-md-9 col-sm-12">
+                    <div class="hero-text">
+                        <h1>ABOUT KIDS SCHOOL</h1>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua. incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="choose-section choose-right-vector common-section">
+    <div class="container">
+        <div class="choose-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 about-work-order-2">
+                    <div class="choose-right">
+                        <div class="title-heading mb-4 mb-lg-5">
+                            <h1>About Our Work</h1>
+                            <img src="assets/images/img-blog-pencil.png" alt="">
+                        </div>
+                        <p [innerHtml]="aboutOurWork?.description"></p>
+                        <div class="choose-benefit mt-4">
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point1}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point2}}</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point3}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point4}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 choose-img-content mb-5 mb-lg-0 about-work-order-1">
+                    <div class="choose-left ">
+                        <img src="assets/images/about-work-image.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="choose-section choose-left-vector common-section">
+    <div class="container">
+        <div class="choose-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 choose-img-content mb-5 mb-lg-0">
+                    <div class="choose-left">
+                        <img src="assets/images/about-mission-image.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="choose-right">
+                        <div class="title-heading mb-4 mb-lg-5">
+                            <h1>Our Vision</h1>
+                            <img src="assets/images/img-featured-pencil.png" alt="">
+                        </div>
+                        <p [innerHtml]="aboutOurWork?.description"></p>
+                        <div class="choose-benefit mt-4">
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point1}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point2}}</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point3}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg"
+                                        alt=""><span>{{aboutOurWork?.point4}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-section common-section">
+    <div class="container">
+        <div class="team">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 ">
+                    <div class="team-content">
+                        <div class="title-heading mb-4 mb-lg-5">
+                            <h1>About Team</h1>
+                            <img src="assets/images/img-activity-pencil.png" alt="">
+                        </div>
+                        <p [innerHtml]="aboutTeam[0].title"></p>
+                    </div>
+                </div>
+                <div *ngFor="let teamMember of aboutTeam" class="col-lg-4 col-md-6 mt-lg-4">
+                    <div class="team-content">
+                        <div class="box">
+                            <!-- <img src="{{aboutTeam?.img4}}"> -->
+                            <img src="{{'assets/images/' + teamMember.img}}">
+                            <div class="box-content">
+                                <h4 [innerHtml]="teamMember.name" class="title"></h4>
+                                <span [innerHtml]="teamMember.post" class="post"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-count-section feature-course-section wave-middle">
+    <div class="about-count-vector">
+        <div class="container">
+            <div class="course-content ">
+                <div class="row">
+                    <div class="col-lg-12 feature-left">
+                        <div class="features-content common-section">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-6 text-center mb-4">
+                                    <div class="student-count-number count-number">
+                                        <h1 class="">1125</h1>
+                                        <p>Students</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6 text-center mb-4">
+                                    <div class="teacher-count-number count-number">
+                                        <h1 class="">225</h1>
+                                        <p>Teachers</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6 text-center">
+                                    <div class="classroom-count-number count-number">
+                                        <h1 class="">40</h1>
+                                        <p>Classroom</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6 text-center">
+                                    <div class="bus-count-number count-number">
+                                        <h1 class="">43</h1>
+                                        <p>Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="achievement-section activity-section text-center activity-vector common-section">
+    <div class="container">
+        <div class="activity-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cl">
+                        <div class="title-heading title-heading-center mb-4 mb-lg-5">
+                            <h1>Our Achievement</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p [innerHtml]="aboutOurWork?.description">Lorem Ipsum is simply dummy text of the printing and
+                            typesetting
+                            industry. Lorem Ipsum
+                            has been the industry's standard dummy text ever since the 1500s. At vero eos et
+                            accusamus et iusto odio dignissimos ducimus qui blanditiis
+                            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                            sint.</p>
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                            <div *ngFor="let achv of ourAchivment; let i= index" ngxSlickItem
+                                class="activity activity-responsive portfolio_slider">
+                                <div class="inner">
+                                    <div class="carousel-item active text-center">
+                                        <div class="achievement-image">
+                                            <img src="{{'assets/images/'+ achv.img}}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="teaching-section teaching-vector text-center">
+    <div class="container">
+        <div class="teaching-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-9 mt-5 mb-5">
+                    <div class="teaching-quote">
+                        <div class="title-heading mb-4 mb-lg-5 text-center">
+                            <h1>Teaching Your Child Some Good Manners</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the industry's standard dummy text ever since the 1500s</p>
+                        <button class="btn mt-4" type="button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,17 @@
+{
+    "activity_icon": [
+      {
+        "title": "Indoor Games",
+        "image": "assets/images/ic_indoor_game.svg"
+      },
+      {
+        "title": "Sport Activities",
+        "image": "assets/images/ic_sport_activity.svg"
+      },
+      {
+        "title": "Water Activities",
+        "image": "assets/images/ic_water_games.svg"
+      }
+    ]
+}
+

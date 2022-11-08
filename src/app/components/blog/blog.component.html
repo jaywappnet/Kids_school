@@ -1,0 +1,148 @@
+<section class="blog-hero-section">
+    <div class="hero-image"><img src="assets/images/img-blog-hero.png" class="hero-image-desktop" alt=""><img
+            src="assets/images/img-blog-hero-mobile.png" class="hero-image-mobile" alt=""></div>
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6 col-md-9 col-sm-12">
+                    <div class="hero-text">
+                        <h1>BLOG</h1>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua.
+                            incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog-section choose-right-vector blog-left-vector common-section">
+    <div class="container">
+        <div class="blog-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-details">
+                        <div class="blog-panel">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8">
+                                    <div *ngFor="let typeClass of typeOfClass" class="col-lg-12 mb-4">
+                                        <div class="blog-info">
+                                            <div class="card">
+                                                <img src="{{'assets/images/' + typeClass.image}}" class="card-img-top"
+                                                    alt="...">
+                                                <div class="card-details">
+                                                    <div class="blog-date-year text-center">
+                                                        <p class="mb-0">08 June 2020</p>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <h5 [innerHtml]="typeClass.title" class="card-title"></h5>
+                                                        <p [innerHtml]="typeClass.description" class="card-text"></p>
+                                                        <div class="card-info">
+                                                            <button class="btn" type="button">Read More</button>
+                                                            <a href="#">5 Comments</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- search, Categories, Archives -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="blog-box">
+                                        <div class="blog-box-details mb-4">
+                                            <h3>Search</h3>
+                                            <div class="blog-box-content">
+                                                <p>Search</p>
+                                                <img src="assets/images/ic_search.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="blog-box-details mb-4">
+                                            <h3>Categories</h3>
+                                            <div class="blog-box-content">
+                                                <p>Event</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Food</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Games</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Education</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Event</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Food</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Games</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Education</p>
+                                            </div>
+                                        </div>
+                                        <div class="blog-box-details mb-4">
+                                            <h3>Archives</h3>
+                                            <div class="blog-box-content">
+                                                <p>May 2021</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>April 2021</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>January 2021</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>Novermber 2020</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>October 2020</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>August 2020</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>February 2020</p>
+                                            </div>
+                                            <div class="blog-box-content">
+                                                <p>January 2020</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="teaching-section teaching-vector text-center">
+    <div class="container">
+        <div class="teaching-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-9 mt-5 mb-5">
+                    <div class="teaching-quote">
+                        <div class="title-heading mb-4 mb-lg-5 text-center">
+                            <h1>Teaching Your Child Some Good Manners</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s</p>
+                        <button class="btn mt-4" type="button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

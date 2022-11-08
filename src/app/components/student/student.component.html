@@ -1,0 +1,304 @@
+<section class="student-hero-section">
+    <!-- <div class="hero-image"><img src="{{studentBgImg?.img}}" alt="">/</div> -->
+    <div class="hero-image"><img src="assets/images/img-student-hero.png" alt=""></div>
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6 col-md-9 col-sm-12">
+                    <div class="hero-text">
+                        <h1>STUDENTS</h1>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua.
+                            incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="play-group-section choose-left-vector choose-right-vector common-section">
+    <div class="container">
+        <div class="student-pg-content">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12">
+                    <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                        <h1 [innerHtml]="playGroundData?.title"></h1>
+                        <img src="{{'assets/images/'+ playGroundData?.icon}}" alt="" style="margin: 0">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-3 mb-lg-4 pg-order-2">
+                        <div class="pg-details">
+                            <div class="pg-info student-pg-info">
+                                <p>Age Group: <span>{{playGroundData?.age_group}}</span> <br> Timing:
+                                    <span>{{playGroundData?.timing}}</span> <br> Days:
+                                    <span>{{playGroundData?.days}}</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 pg-description" [innerHtml]="playGroundData?.description"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-3 mb-lg-4 pg-order-1">
+                        <div class="pg-image">
+                            <img src="{{'assets/images/'+ playGroundData?.image}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-lg-0">
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-content">
+                            <div class="pg-key-heading pg-heading">
+                                <h3>Key Highlights of PG Curriculum</h3>
+                            </div>
+                            <div class="choose-benefit mt-4" *ngFor="let data of keyHighlightsPg">
+                                <ul>
+                                    <li class="mb-2">
+                                        <img src="assets/images/icon-chosse.svg" alt="">
+                                        <span>{{data}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-content">
+                            <div class="pg-activity-heading pg-heading">
+                                <h3>Activities Involved</h3>
+                            </div>
+                            <div class="choose-benefit mt-4" *ngFor="let data of playGroupActivity">
+                                <ul>
+                                    <li class="mb-2">
+                                        <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="pg-syllabus">
+                            <h3 class="pg-syllabus-heading">Our Syllabus:</h3>
+                            <a href="" download="syllabus"><img src="assets/images/ic_pdf.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="nursery-section play-group-section">
+    <div class="nursery-vector">
+        <div class="container">
+            <div class="student-pg-content common-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                            <h1 [innerHtml]="nurseryData?.title"></h1>
+                            <img src="{{'assets/images/'+ nurseryData?.icon}}" alt="" style="margin: 0">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-image">
+                            <img src="{{'assets/images/'+ nurseryData?.image}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-details">
+                            <div class="pg-info student-nursery-info">
+                                <p>Age Group: <span>{{nurseryData?.age_group}}</span> <br> Timing:
+                                    <span>{{nurseryData?.timing}}</span>
+                                    <br> Days: <span>{{nurseryData?.days}}</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 pg-description" [innerHtml]="nurseryData?.description"></p>
+                        </div>
+                    </div>
+                    <div class="row g-lg-0 justify-content-center">
+                        <div class="col-lg-6 mb-3 mb-lg-4">
+                            <div class="pg-content">
+                                <div class="nursery-key-heading pg-heading">
+                                    <h3>Key Highlights of PG Curriculum</h3>
+                                </div>
+                                <div class="choose-benefit nursery-key-content mt-4"
+                                    *ngFor="let data of keyHighlightsPg">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3 mb-lg-4">
+                            <div class="pg-content">
+                                <div class="pg-activity-heading pg-heading">
+                                    <h3>Activities Involved</h3>
+                                </div>
+                                <div class="choose-benefit nursery-key-content mt-4"
+                                    *ngFor="let data of playGroupActivity">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="pg-syllabus">
+                                <h3 class="pg-syllabus-heading">Our Syllabus:</h3>
+                                <a href="" download="syllabus"><img src="assets/images/ic_pdf.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="play-group-section activity-vector common-section">
+    <div class="container">
+        <div class="student-pg-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                        <h1 [innerHtml]="juniorKGData?.title"></h1>
+                        <img src="{{'assets/images/'+ juniorKGData?.icon}}" alt="" style="margin: 0">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-3 mb-lg-4 pg-order-2">
+                        <div class="pg-details">
+                            <div class="pg-info student-pg-info">
+                                <p>Age Group: <span>{{juniorKGData?.age_group}}</span> <br> Timing:
+                                    <span>{{juniorKGData?.timing}}</span> <br> Days: <span>{{juniorKGData?.days}}</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 pg-description" [innerHtml]="juniorKGData?.description"></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4 pg-order-1">
+                        <div class="pg-image">
+                            <img src="{{'assets/images/'+ juniorKGData?.image}}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-lg-0">
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-content">
+                            <div class="pg-key-heading pg-heading">
+                                <h3>Key Highlights of PG Curriculum</h3>
+                            </div>
+                            <div class="choose-benefit mt-4" *ngFor="let data of keyHighlightsPg">
+                                <ul>
+                                    <li class="mb-2">
+                                        <img src="assets/images/icon-chosse.svg" alt="">
+                                        <span>{{data}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-content">
+                            <div class="pg-activity-heading pg-heading">
+                                <h3>Activities Involved</h3>
+                            </div>
+                            <div class="choose-benefit mt-4" *ngFor="let data of playGroupActivity">
+                                <ul>
+                                    <li class="mb-2">
+                                        <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="pg-syllabus">
+                            <h3 class="pg-syllabus-heading">Our Syllabus:</h3>
+                            <a href="" download="syllabus"><img src="assets/images/ic_pdf.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="nursery-section play-group-section">
+    <div class="testimonial-vector">
+        <div class="container">
+            <div class="student-pg-content common-section">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                            <h1 [innerHtml]="seniorKGData?.title"></h1>
+                            <img src="{{'assets/images/'+ seniorKGData?.icon}}" alt="" style="margin: 0">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-image">
+                            <img src="{{'assets/images/'+ seniorKGData?.image}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3 mb-lg-4">
+                        <div class="pg-details">
+                            <div class="pg-info student-nursery-info">
+                                <p>Age Group: <span>{{seniorKGData?.age_group}}</span> <br> Timing:
+                                    <span>{{seniorKGData?.timing}}</span> <br> Days: <span>{{seniorKGData?.days}}</span>
+                                </p>
+                            </div>
+                            <p class="mt-2 pg-description" [innerHtml]="seniorKGData?.description"></p>
+                        </div>
+                    </div>
+                    <div class="row g-lg-0">
+                        <div class="col-lg-6 mb-3 mb-lg-4">
+                            <div class="pg-content">
+                                <div class="nursery-key-heading pg-heading">
+                                    <h3>Key Highlights of PG Curriculum</h3>
+                                </div>
+                                <div class="choose-benefit nursery-key-content mt-4"
+                                    *ngFor="let data of keyHighlightsPg">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3 mb-lg-4">
+                            <div class="pg-content">
+                                <div class="pg-activity-heading pg-heading">
+                                    <h3>Activities Involved</h3>
+                                </div>
+                                <div class="choose-benefit nursery-key-content mt-4"
+                                    *ngFor="let data of playGroupActivity">
+                                    <ul>
+                                        <li class="mb-2">
+                                            <img src="assets/images/icon-chosse.svg" alt=""><span>{{data}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="pg-syllabus">
+                                <h3 class="pg-syllabus-heading">Our Syllabus:</h3>
+                                <a href="" download="syllabus"><img src="assets/images/ic_pdf.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,346 @@
+<section class="photo-gallery-hero-section">
+    <div class="hero-image"><img src="assets/images/img-photo-g-hero.png" class="hero-image-desktop" alt=""><img
+            src="assets/images/img-photo-g-hero-mobile.png" class="hero-image-mobile" alt=""></div>
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                    <div class="hero-text">
+                        <h1>PHOTO GALLERY</h1>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua.
+                            incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="photo-gallery-section choose-right-vector photo-g-vector common-section">
+    <div class="container">
+        <div class="gallery-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="gallery-heading">
+                        <nav>
+                            <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                                <button class="nav-link wave-middle active" id="nav-event-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-event" type="button" role="tab" aria-controls="nav-event"
+                                    aria-selected="true">
+                                    <h4>Event</h4>
+                                </button>
+                                <button class="nav-link wave-middle" id="nav-celebration-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-celebration" type="button" role="tab"
+                                    aria-controls="nav-celebration" aria-selected="false">
+                                    <h4>Celebration</h4>
+                                </button>
+                                <button class="nav-link wave-middle" id="nav-achievement-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-achievement" type="button" role="tab"
+                                    aria-controls="nav-achievement" aria-selected="false">
+                                    <h4>Student Achievement</h4>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content mt-4 mb-4" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-event" role="tabpanel"
+                                aria-labelledby="nav-event-tab">
+                                <div class="event-heading">
+                                    <nav class="mt-4 mb-4">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-event1-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-event1" type="button" role="tab"
+                                                aria-controls="nav-event1" aria-selected="true"
+                                                (click)="eventImages('')">All</button>
+                                            <button class="nav-link" id="nav-event2-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-event2" type="button" role="tab"
+                                                aria-controls="nav-event2" aria-selected="false"
+                                                (click)="eventImages('drawing')">Drawing</button>
+                                            <button class="nav-link" id="nav-event3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-event3" type="button" role="tab"
+                                                aria-controls="nav-event3" aria-selected="false"
+                                                (click)="eventImages('game')">Game</button>
+                                            <button class="nav-link" id="nav-event4-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-event4" type="button" role="tab"
+                                                aria-controls="nav-event4" aria-selected="false"
+                                                (click)="eventImages('hide and seek')">Hide and Seek</button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-event1" role="tabpanel"
+                                            aria-labelledby="nav-event1-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let event of eventImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+event.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-event2" role="tabpanel"
+                                            aria-labelledby="nav-event2-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let event of eventImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+event.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-event3" role="tabpanel"
+                                            aria-labelledby="nav-event3-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let event of eventImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+event.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-event4" role="tabpanel"
+                                            aria-labelledby="nav-event4-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let event of eventImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+event.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-celebration" role="tabpanel"
+                                aria-labelledby="nav-celebration-tab">
+                                <div class="event-heading">
+                                    <nav class="mt-4 mb-4">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-celebration1-tab"
+                                                data-bs-toggle="tab" data-bs-target="#nav-celebration1" type="button"
+                                                role="tab" aria-controls="nav-celebration1" aria-selected="true"
+                                                (click)="celebrationImage('')">All</button>
+                                            <button class="nav-link" id="nav-celebration2-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-celebration2" type="button" role="tab"
+                                                aria-controls="nav-celebration2" aria-selected="false"
+                                                (click)="celebrationImage('independence day')">Independence day</button>
+                                            <button class="nav-link" id="nav-celebration3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-celebration3" type="button" role="tab"
+                                                aria-controls="nav-celebration3" aria-selected="false"
+                                                (click)="celebrationImage('janmashtami')">Janmashtami</button>
+                                            <button class="nav-link" id="nav-celebration4-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-celebration4" type="button" role="tab"
+                                                aria-controls="nav-celebration4" aria-selected="false"
+                                                (click)="celebrationImage('raksha bandhan')">Raksha Bandhan</button>
+                                            <button class="nav-link" id="nav-celebration5-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-celebration5" type="button" role="tab"
+                                                aria-controls="nav-celebration5" aria-selected="false"
+                                                (click)="celebrationImage('ramzan')">Ramzan</button>
+                                            <button class="nav-link" id="nav-celebration6-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-celebration6" type="button" role="tab"
+                                                aria-controls="nav-celebration6" aria-selected="false"
+                                                (click)="celebrationImage('diwali')">Diwali</button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-celebration1" role="tabpanel"
+                                            aria-labelledby="nav-celebration1-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-celebration2" role="tabpanel"
+                                            aria-labelledby="nav-celebration2-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-celebration3" role="tabpanel"
+                                            aria-labelledby="nav-celebration3-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-celebration4" role="tabpanel"
+                                            aria-labelledby="nav-celebration4-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-celebration5" role="tabpanel"
+                                            aria-labelledby="nav-celebration5-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-celebration6" role="tabpanel"
+                                            aria-labelledby="nav-celebration6-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let celebration of celebrationImageData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+celebration.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-achievement" role="tabpanel"
+                                aria-labelledby="nav-achievement-tab">
+                                <div class="event-heading">
+                                    <nav class="mt-4 mb-4">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-achievement1-tab"
+                                                data-bs-toggle="tab" data-bs-target="#nav-achievement1" type="button"
+                                                role="tab" aria-controls="nav-achievement1" aria-selected="true"
+                                                (click)="achievementImage('')">All</button>
+                                            <button class="nav-link" id="nav-achievement2-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-achievement2" type="button" role="tab"
+                                                aria-controls="nav-achievement2" aria-selected="false"
+                                                (click)="achievementImage('1st')">1st</button>
+                                            <button class="nav-link" id="nav-achievement3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-achievement3" type="button" role="tab"
+                                                aria-controls="nav-achievement3" aria-selected="false"
+                                                (click)="achievementImage('2nd')">2nd</button>
+                                            <button class="nav-link" id="nav-achievement4-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-achievement4" type="button" role="tab"
+                                                aria-controls="nav-achievement4" aria-selected="false"
+                                                (click)="achievementImage('3rd')">3rd</button>
+                                        </div>
+                                    </nav>
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-achievement1" role="tabpanel"
+                                            aria-labelledby="nav-achievement1-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let achievement of achievementData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+achievement.image}}" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-achievement2" role="tabpanel"
+                                            aria-labelledby="nav-achievement2-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let achievement of achievementData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+achievement.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-achievement3" role="tabpanel"
+                                            aria-labelledby="nav-achievement3-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let achievement of achievementData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+achievement.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-achievement4" role="tabpanel"
+                                            aria-labelledby="nav-achievement4-tab">
+                                            <div class="photo-gallery-content">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6 mb-4"
+                                                        *ngFor="let achievement of achievementData">
+                                                        <div class="photo-box">
+                                                            <img src="{{'assets/images/'+achievement.image}}" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="teaching-section teaching-vector text-center">
+    <div class="container">
+        <div class="teaching-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-9 mt-5 mb-5">
+                    <div class="teaching-quote">
+                        <div class="title-heading mb-4 mb-lg-5 text-center">
+                            <h1>Teaching Your Child Some Good Manners</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s</p>
+                        <button class="btn mt-4" type="button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,292 @@
+<section class="hero-section">
+    <div class="hero-image "><img src="assets/images/hero-image.png" class="hero-image-desktop" alt=""><img
+            src="assets/images/hero-image-mobile.png" class="hero-image-mobile" alt=""></div>
+
+    <div class="hero-content">
+        <div class="container ">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6 col-md-9 col-sm-12">
+                    <div class="hero-text">
+                        <h1>OPEN ADMISSION</h1>
+                        <h5 class="hero-age">AGE 2-8 YEARS</h5>
+                        <h4 class="hero-wel">WELCOME</h4>
+                        <p class="hero-age">Lorem ipsum dolor sit amet, consectetur incididunt ut labore et dolotre
+                            magna aliqua.
+                            incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="choose-section choose-left-vector choose-right-vector common-section">
+    <div class="container">
+        <div class="choose-content">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 choose-img-content mb-5 mb-lg-0">
+                    <div class="choose-left">
+                        <img src="assets/images/choose-image.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="choose-right">
+                        <div class="title-heading mb-4 mb-lg-5">
+                            <h1>{{wcuData?.title}}</h1>
+                            <img src="assets/images/img-choose-pencil.png" alt="">
+                        </div>
+                        <p>{{wcuData?.description}}</p>
+                        <div class="choose-benefit mt-4">
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point1}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point2}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point3}}</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point4}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point5}}</span>
+                                </li>
+                                <li class="mb-2">
+                                    <img src="assets/images/icon-chosse.svg" alt=""><span>{{wcuData?.point6}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-course-section">
+    <div class="features-course-vector">
+        <div class="container">
+            <div class="course-content common-section">
+                <div class="row">
+                    <div class="col-lg-8 feature-left mt-5 mt-lg-0">
+                        <div class="features-content ">
+                            <div class="title-heading mb-4 mb-lg-5">
+                                <h1>Featured Courses</h1>
+                                <img src="assets/images/img-featured-pencil.png" alt="">
+                            </div>
+                            <p>{{courseData?.description}}</p>
+                            <div class="row pt-4 pb-4">
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <div class="course-features">
+                                        <img src="assets/images/ic_kids_activity_club.svg" alt="">
+                                        <h5 style="color: #cc42e1;">{{courseData?.course1}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <div class="course-features">
+                                        <img src="assets/images/ic_kids_picnic.svg" alt="">
+                                        <h5 style="color: #5b9ec0;">{{courseData?.course2}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <div class="course-features">
+                                        <img src="assets/images/ic_kids_drawing.svg" alt="">
+                                        <h5 style="color: #46b741;">{{courseData?.course3}}</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 mb-4">
+                                    <div class="course-features">
+                                        <img src="assets/images/ic_kids_parties.svg" alt="">
+                                        <h5 style="color: #cc527d;">{{courseData?.course4}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn" type="button">View All</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 feature-right text-center">
+                        <div class="feature-image">
+                            <img src="assets/images/img_features_courses.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- kids Activitis -->
+<section class="activity-section text-center activity-vector common-section">
+    <div class="container">
+        <div class="activity-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cl">
+                        <div class="title-heading title-heading-center mb-4 mb-lg-5">
+                            <h1>Kids Activities</h1>
+                            <img src="assets/images/img-activity-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                            <div *ngFor="let ic of activityData; let i= index" ngxSlickItem
+                                class="activity activity-responsive portfolio_slider">
+                                <div class="inner">
+                                    <div class="carousel-item active text-center">
+                                        <div class="row">
+                                            <div class="">
+                                                <div class="card" [style.background]="getColor(i)">
+                                                    <div class="card-icon"><img src="{{get_image(ic.title)}}"
+                                                            class="card-img-top" alt=""></div>
+                                                    <div class="card-body mt-4 mb-3">
+                                                        <h5 class="card-title">{{ic.title}}</h5>
+                                                        <p class="card-text">
+                                                            {{ic.paragraph}}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ngx-slick-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Parents Testimonials -->
+<section class="testimonial-section testimonial-vector common-section">
+    <div class="container">
+        <div class="testimonial-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                        <h1>Parents Testimonials</h1>
+                        <img src="assets/images/img-testimonials-pencil.png" alt="" style="margin: 0">
+                    </div>
+
+                    <!-- slider parents testimonials start -->
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel"
+                        [config]="slideConfig_Parents_Testimonials">
+                        <div *ngFor="let pt of parentData" ngxSlickItem class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="parents-image">
+                                            <img src="{{'assets/images/'+pt.profile_image }}" alt="no img">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="parents-content">
+                                            <img src="assets/images/ic_inverted_coma.svg" class="mb-4" alt="">
+                                            <p [innerHtml]="pt.description"></p>
+                                            <h5>{{pt.name}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ngx-slick-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- teaching-quote -->
+<section class="teaching-section teaching-vector text-center">
+    <div class="container">
+        <div class="teaching-content doll-vector">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-9 mt-5 mb-5">
+                    <div class="teaching-quote">
+                        <div class="title-heading mb-4 mb-lg-5 text-center">
+                            <h1>Teaching Your Child Some Good Manners</h1>
+                            <img src="assets/images/img-teaching-quote-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s</p>
+                        <button class="btn mt-4" type="button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- blog -->
+<section class="blog-section common-section blog-vector text-center">
+    <div class="container">
+        <div class="blog-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-details">
+                        <div class="title-heading title-heading-center mb-4 mb-lg-5 text-center">
+                            <h1>Our Blog</h1>
+                            <img src="assets/images/img-blog-pencil.png" alt="" style="margin: 0">
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s</p>
+                        <div class="blog-panel">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mt-4">
+                                    <div class="blog-info">
+                                        <div class="card">
+                                            <img src="assets/images/img-blog-1.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Weekely Drawing Class</h5>
+                                                <p class="card-text">Lorem ipsum dummy text goes here</p>
+                                            </div>
+                                            <div class="blog-date text-center">
+                                                <p class="mb-0">08 June</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mt-4">
+                                    <div class="blog-info">
+                                        <div class="card">
+                                            <img src="assets/images/img-blog-2.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Weekely Drawing Class</h5>
+                                                <p class="card-text">Lorem ipsum dummy text goes here</p>
+                                            </div>
+                                            <div class="blog-date text-center">
+                                                <p class="mb-0">08 June</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mt-4">
+                                    <div class="blog-info">
+                                        <div class="card">
+                                            <img src="assets/images/img-blog-3.png" class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Weekely Drawing Class</h5>
+                                                <p class="card-text">Lorem ipsum dummy text goes here</p>
+                                            </div>
+                                            <div class="blog-date text-center">
+                                                <p class="mb-0">08 June</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
