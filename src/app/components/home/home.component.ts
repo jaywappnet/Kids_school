@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
     }
 
     getColor(i: any) {
-        return this.colors[i]
+        return this.colors[i];
     }
 
     getActivityData() {

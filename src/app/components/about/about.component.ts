@@ -8,12 +8,10 @@ import { AboutService } from 'src/app/shared/service/about.service';
 })
 export class AboutComponent implements OnInit {
 
-    aboutImg: any;
     aboutOurWork: any;
     ourVision: any;
     aboutTeam: any;
     ourAchivment: any;
-    temp: any = [];
 
     constructor(private aboutservice: AboutService) { }
 

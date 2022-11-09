@@ -8,12 +8,9 @@ import { StudentsService } from 'src/app/shared/service/students.service';
 })
 export class StudentComponent implements OnInit {
 
-    studentBgImg: any;
-    studentDetail: any;
     keyHighlightsPg: any;
     playGroupActivity: any;
-    syllebus: any;
-    studentDetails: any;
+    syllabus: any;
 
     playGroundData: any;
     nurseryData: any;
@@ -23,7 +20,6 @@ export class StudentComponent implements OnInit {
     constructor(private studentservice: StudentsService) { }
 
     ngOnInit(): void {
-
 
         this.studentservice.getKeyHighlights().subscribe((data: any) => {
             let res = data.data[0].key_highlights;
@@ -36,7 +32,7 @@ export class StudentComponent implements OnInit {
         });
 
         this.studentservice.getSyllebus().subscribe((data: any) => {
-            this.syllebus = data.data;
+            this.syllabus = data.data;
         });
 
         this.studentservice.getStudentDetail().subscribe((data: any) => {

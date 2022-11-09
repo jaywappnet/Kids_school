@@ -10,8 +10,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactUsComponent implements OnInit {
 
     contectBg: any;
-    queriesForm!: FormGroup;
     getinTouch: any;
+    queriesForm!: FormGroup;
     submitted = false;
 
     constructor(private contactus: ContactUsService, private fb: FormBuilder) { }

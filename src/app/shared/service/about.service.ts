@@ -9,10 +9,6 @@ export class AboutService {
 
     constructor(private http: HttpClient) { }
 
-    getAboutImg() {
-        return this.http.get(environment.baseURL + "about/")
-    }
-
     getAboutWork() {
         return this.http.get(environment.baseURL + "about_work/")
     }

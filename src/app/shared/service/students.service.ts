@@ -9,10 +9,6 @@ export class StudentsService {
 
     constructor(private http: HttpClient) { }
 
-    getStudentBgImg() {
-        return this.http.get(environment.baseURL + "studentbg/1")
-    }
-
     getStudentDetail() {
         return this.http.get(environment.baseURL + "describe/")
     }
